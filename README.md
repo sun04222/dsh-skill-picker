@@ -8,7 +8,12 @@ DeepSeek Harness (DSH) Web 插件：在输入框工具行加一个「Skill」按
 
 ## 快速开始
 
-安装后重启 DSH Web → 刷新页面 → 输入框左侧出现「Skill」按钮 → 点开选一项 → 回车，`/name ` 已落在光标处。
+```powershell
+# 从 GitHub 安装（当前会话所在的 profile），不走 npm 源
+dsh plugin --profile web add github:sun04222/dsh-skill-picker
+```
+
+重启 DSH Web → 刷新页面 → 输入框左侧出现「Skill」按钮 → 点开选一项 → 回车，`/name ` 已落在光标处。
 
 ## 功能
 
