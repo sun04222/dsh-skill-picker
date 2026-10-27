@@ -1,0 +1,45 @@
+{
+  "name": "dsh-skill-picker",
+  "version": "1.0.0",
+  "description": "Skill picker for DeepSeek Harness: a composer button that lists the session's invocable skills and inserts '/name' into the draft on pick, riding the official slash-skill pipeline.",
+  "type": "module",
+  "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./client": "./client.js",
+    "./cordis.patch.yml": "./cordis.patch.yml",
+    "./package.json": "./package.json",
+    "./README.md": "./README.md"
+  },
+  "files": [
+    "index.js",
+    "client.js",
+    "cordis.patch.yml",
+    "README.md"
+  ],
+  "keywords": [
+    "dsh-plugin",
+    "deepseek-harness",
+    "skill-picker",
+    "composer",
+    "slash-command"
+  ],
+  "author": "sun04222",
+  "license": "MIT",
+  "engines": {
+    "node": ">=22"
+  },
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "platform": "web",
+      "immediately": true,
+      "inject": [
+        "@deepseek-ai/dsh-client-ui-conversation",
+        "@deepseek-ai/dsh-client-locale"
+      ]
+    }
+  }
+}
